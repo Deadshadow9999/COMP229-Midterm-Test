@@ -35,7 +35,8 @@ router.post('/add', (req, res, next) => {
     "Title": req.body.title,
     "Price": req.body.price,
     "Author": req.body.author,
-    "Genre": req.body.genre
+    "Genre": req.body.genre,
+    "Description": req.body.description
   });
 
   book.create(newBook, (err, book) =>{
@@ -80,7 +81,8 @@ router.post('/details/:id', (req, res, next) => {
     "Price": req.body.price,
     "Title": req.body.title,
     "Author": req.body.author,
-    "Genre": req.body.genre
+    "Genre": req.body.genre,
+    "Description": req.body.description
   });
 
   book.updateOne({_id: id}, updatedBook, (err) => {
